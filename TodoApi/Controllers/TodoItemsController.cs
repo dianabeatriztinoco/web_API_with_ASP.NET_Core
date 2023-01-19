@@ -3,8 +3,7 @@ using Microsoft.EntityFrameworkCore;
 using TodoApi.Models;
 using TodoApi.Services;
 
-namespace TodoApi.Controllers
-{
+namespace TodoApi.Controllers;
 
     [Route("api/[controller]")]
     [ApiController]
@@ -135,4 +134,3 @@ namespace TodoApi.Controllers
                IsComplete = todoItem.IsComplete
            };
     }
-}
