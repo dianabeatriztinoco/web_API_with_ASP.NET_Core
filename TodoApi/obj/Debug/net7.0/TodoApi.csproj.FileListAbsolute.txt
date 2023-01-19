@@ -277,13 +277,6 @@
 /Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
 /Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.csproj.AssemblyReference.cache
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.GeneratedMSBuildEditorConfig.editorconfig
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.AssemblyInfoInputs.cache
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.AssemblyInfo.cs
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.csproj.CoreCompileInputs.cache
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.MvcApplicationPartsAssemblyInfo.cs
-/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/appsettings.Development.json
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/appsettings.json
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/TodoApi
@@ -542,6 +535,13 @@
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/runtimes/win/lib/netstandard2.0/System.Runtime.Caching.dll
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Security.Cryptography.ProtectedData.dll
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/bin/Debug/net7.0/runtimes/win/lib/net6.0/System.Windows.Extensions.dll
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.csproj.AssemblyReference.cache
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.GeneratedMSBuildEditorConfig.editorconfig
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.AssemblyInfoInputs.cache
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.AssemblyInfo.cs
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.csproj.CoreCompileInputs.cache
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.MvcApplicationPartsAssemblyInfo.cs
+/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/TodoApi.MvcApplicationPartsAssemblyInfo.cache
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/staticwebassets/msbuild.TodoApi.Microsoft.AspNetCore.StaticWebAssets.props
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/staticwebassets/msbuild.build.TodoApi.props
 /Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/Debug/net7.0/staticwebassets/msbuild.buildMultiTargeting.TodoApi.props
