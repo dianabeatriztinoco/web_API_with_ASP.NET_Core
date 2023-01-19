@@ -34,6 +34,7 @@ public class TodoItemsController : ControllerBase
 	public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
 	{
 		var result = await _todoService.GetTodoItem(id);
+		return result;
 		// leaving what used to be here commented out so you can see what went where:
 
 		// this went to TodoRepository:
