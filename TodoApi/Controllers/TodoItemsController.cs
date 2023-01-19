@@ -5,132 +5,132 @@ using TodoApi.Services;
 
 namespace TodoApi.Controllers;
 
-    [Route("api/[controller]")]
-    [ApiController]
-    public class TodoItemsController : ControllerBase
-    {
-        // once you've implemented the repository layer, you won't need to inject context here
-        private readonly TodoContext _context;
-        private readonly TodoService _todoService;
+[Route("api/[controller]")]
+[ApiController]
+public class TodoItemsController : ControllerBase
+{
+	// once you've implemented the repository layer, you won't need to inject context here
+	private readonly TodoContext _context;
+	private readonly TodoService _todoService;
 
-        public TodoItemsController(TodoContext context, TodoService todoService)
-        {
-            _context = context;
-            _todoService = todoService;
-        }
+	public TodoItemsController(TodoContext context, TodoService todoService)
+	{
+		_context = context;
+		_todoService = todoService;
+	}
 
-        // GET: api/TodoItems
-        [HttpGet]
-        public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
-        {
-            return await _context.TodoItems
-                .Select(x => ItemToDTO(x))
-                .ToListAsync();
-        }
+	// GET: api/TodoItems
+	[HttpGet]
+	public async Task<ActionResult<IEnumerable<TodoItemDTO>>> GetTodoItems()
+	{
+		return await _context.TodoItems
+			.Select(x => ItemToDTO(x))
+			.ToListAsync();
+	}
 
-        // GET: api/TodoItems/5
-        // <snippet_GetByID>
-        [HttpGet("{id}")]
-        public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
-        {
-            var result = await _todoService.GetTodoItem(id);
-            // leaving what used to be here commented out so you can see what went where:
+	// GET: api/TodoItems/5
+	// <snippet_GetByID>
+	[HttpGet("{id}")]
+	public async Task<ActionResult<TodoItemDTO>> GetTodoItem(long id)
+	{
+		var result = await _todoService.GetTodoItem(id);
+		// leaving what used to be here commented out so you can see what went where:
 
-            // this went to TodoRepository:
-            //var todoItem = await _context.TodoItems.FindAsync(id);
+		// this went to TodoRepository:
+		//var todoItem = await _context.TodoItems.FindAsync(id);
 
-            //if (todoItem == null)
-            //{
-            //    return NotFound();
-            //}
+		//if (todoItem == null)
+		//{
+		//    return NotFound();
+		//}
 
-            // ths went to TodoService:
-            //return ItemToDTO(todoItem);
-        }
-        // </snippet_GetByID>
+		// ths went to TodoService:
+		//return ItemToDTO(todoItem);
+	}
+	// </snippet_GetByID>
 
-        // PUT: api/TodoItems/5
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        // <snippet_Update>
-        [HttpPut("{id}")]
-        public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
-        {
-            if (id != todoDTO.Id)
-            {
-                return BadRequest();
-            }
+	// PUT: api/TodoItems/5
+	// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+	// <snippet_Update>
+	[HttpPut("{id}")]
+	public async Task<IActionResult> PutTodoItem(long id, TodoItemDTO todoDTO)
+	{
+		if (id != todoDTO.Id)
+		{
+			return BadRequest();
+		}
 
-            var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
+		var todoItem = await _context.TodoItems.FindAsync(id);
+		if (todoItem == null)
+		{
+			return NotFound();
+		}
 
-            todoItem.Name = todoDTO.Name;
-            todoItem.IsComplete = todoDTO.IsComplete;
+		todoItem.Name = todoDTO.Name;
+		todoItem.IsComplete = todoDTO.IsComplete;
 
-            try
-            {
-                await _context.SaveChangesAsync();
-            }
-            catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
-            {
-                return NotFound();
-            }
+		try
+		{
+			await _context.SaveChangesAsync();
+		}
+		catch (DbUpdateConcurrencyException) when (!TodoItemExists(id))
+		{
+			return NotFound();
+		}
 
-            return NoContent();
-        }
-        // </snippet_Update>
+		return NoContent();
+	}
+	// </snippet_Update>
 
-        // POST: api/TodoItems
-        // To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
-        // <snippet_Create>
-        [HttpPost]
-        public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
-        {
-            var todoItem = new TodoItem
-            {
-                IsComplete = todoDTO.IsComplete,
-                Name = todoDTO.Name
-            };
+	// POST: api/TodoItems
+	// To protect from overposting attacks, see https://go.microsoft.com/fwlink/?linkid=2123754
+	// <snippet_Create>
+	[HttpPost]
+	public async Task<ActionResult<TodoItemDTO>> PostTodoItem(TodoItemDTO todoDTO)
+	{
+		var todoItem = new TodoItem
+		{
+			IsComplete = todoDTO.IsComplete,
+			Name = todoDTO.Name
+		};
 
-            _context.TodoItems.Add(todoItem);
-            await _context.SaveChangesAsync();
+		_context.TodoItems.Add(todoItem);
+		await _context.SaveChangesAsync();
 
-            return CreatedAtAction(
-                nameof(GetTodoItem),
-                new { id = todoItem.Id },
-                ItemToDTO(todoItem));
-        }
-        // </snippet_Create>
+		return CreatedAtAction(
+			nameof(GetTodoItem),
+			new { id = todoItem.Id },
+			ItemToDTO(todoItem));
+	}
+	// </snippet_Create>
 
-        // DELETE: api/TodoItems/5
-        [HttpDelete("{id}")]
-        public async Task<IActionResult> DeleteTodoItem(long id)
-        {
-            var todoItem = await _context.TodoItems.FindAsync(id);
-            if (todoItem == null)
-            {
-                return NotFound();
-            }
+	// DELETE: api/TodoItems/5
+	[HttpDelete("{id}")]
+	public async Task<IActionResult> DeleteTodoItem(long id)
+	{
+		var todoItem = await _context.TodoItems.FindAsync(id);
+		if (todoItem == null)
+		{
+			return NotFound();
+		}
 
-            _context.TodoItems.Remove(todoItem);
-            await _context.SaveChangesAsync();
+		_context.TodoItems.Remove(todoItem);
+		await _context.SaveChangesAsync();
 
-            return NoContent();
-        }
+		return NoContent();
+	}
 
-        private bool TodoItemExists(long id)
-        {
-            return _context.TodoItems.Any(e => e.Id == id);
-        }
+	private bool TodoItemExists(long id)
+	{
+		return _context.TodoItems.Any(e => e.Id == id);
+	}
 
-        // once you've moved all model to dto conversions to the service layer, you can get rid of this method -- i've copied it over to TodoService
-        private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
-           new TodoItemDTO
-           {
-               Id = todoItem.Id,
-               Name = todoItem.Name,
-               IsComplete = todoItem.IsComplete
-           };
-    }
+	// once you've moved all model to dto conversions to the service layer, you can get rid of this method -- i've copied it over to TodoService
+	private static TodoItemDTO ItemToDTO(TodoItem todoItem) =>
+	   new TodoItemDTO
+	   {
+		   Id = todoItem.Id,
+		   Name = todoItem.Name,
+		   IsComplete = todoItem.IsComplete
+	   };
+}
