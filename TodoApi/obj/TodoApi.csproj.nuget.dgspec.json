@@ -1,20 +1,20 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj": {}
+    "/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/TodoApi.csproj": {}
   },
   "projects": {
-    "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj": {
+    "/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj",
-        "packagesPath": "/Users/dianabeatriztinoco/.nuget/packages/",
-        "outputPath": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/obj/",
+        "projectPath": "/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/TodoApi.csproj",
+        "packagesPath": "/Users/mg/.nuget/packages/",
+        "outputPath": "/Users/mg/projects/coding/diana/web_API_with_ASP.NET_Core/TodoApi/obj/",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "/Users/dianabeatriztinoco/.nuget/NuGet/NuGet.Config"
+          "/Users/mg/.nuget/NuGet/NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
@@ -84,7 +84,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "/usr/local/share/dotnet/sdk/7.0.102/RuntimeIdentifierGraph.json"
         }
       }
     }
