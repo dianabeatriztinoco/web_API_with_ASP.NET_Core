@@ -1,26 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj": {}
+    "C:\\dev\\diana\\web_API_with_ASP.NET_Core\\TodoApi\\TodoApi.csproj": {}
   },
   "projects": {
-    "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj": {
+    "C:\\dev\\diana\\web_API_with_ASP.NET_Core\\TodoApi\\TodoApi.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj",
+        "projectUniqueName": "C:\\dev\\diana\\web_API_with_ASP.NET_Core\\TodoApi\\TodoApi.csproj",
         "projectName": "TodoApi",
-        "projectPath": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/TodoApi.csproj",
-        "packagesPath": "/Users/dianabeatriztinoco/.nuget/packages/",
-        "outputPath": "/Users/dianabeatriztinoco/Desktop/cellular_consumer_interview/TodoApi/obj/",
+        "projectPath": "C:\\dev\\diana\\web_API_with_ASP.NET_Core\\TodoApi\\TodoApi.csproj",
+        "packagesPath": "C:\\Users\\michael.glaviano\\.nuget\\packages\\",
+        "outputPath": "C:\\dev\\diana\\web_API_with_ASP.NET_Core\\TodoApi\\obj\\",
         "projectStyle": "PackageReference",
+        "fallbackFolders": [
+          "C:\\Program Files\\dotnet\\sdk\\NuGetFallbackFolder"
+        ],
         "configFilePaths": [
-          "/Users/dianabeatriztinoco/.nuget/NuGet/NuGet.Config"
+          "C:\\Users\\michael.glaviano\\AppData\\Roaming\\NuGet\\NuGet.Config",
+          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
           "net7.0"
         ],
         "sources": {
-          "https://api.nuget.org/v3/index.json": {}
+          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
+          "\\\\altapp01.altsrc.net\\Projects\\Consumer Cellular\\Billing - General & Miscellaneous\\PreReleasePackages": {},
+          "\\\\altapp01.altsrc.net\\Projects\\NuGet\\TeamCity": {},
+          "https://api.nuget.org/v3/index.json": {},
+          "https://nuget.consumercellular.com/api/v2/": {},
+          "https://nuget.org/api/v2/": {}
         },
         "frameworks": {
           "net7.0": {
@@ -37,54 +46,17 @@
       "frameworks": {
         "net7.0": {
           "targetAlias": "net7.0",
-          "dependencies": {
-            "Microsoft.AspNetCore.OpenApi": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.Design": {
-              "include": "Runtime, Build, Native, ContentFiles, Analyzers, BuildTransitive",
-              "suppressParent": "All",
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.EntityFrameworkCore.InMemory": {
-              "target": "Package",
-              "version": "[7.0.2, )"
-            },
-            "Microsoft.EntityFrameworkCore.SqlServer": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Microsoft.VisualStudio.Web.CodeGeneration.Design": {
-              "target": "Package",
-              "version": "[7.0.0, )"
-            },
-            "Swashbuckle.AspNetCore": {
-              "target": "Package",
-              "version": "[6.4.0, )"
-            }
-          },
           "imports": [
             "net461",
             "net462",
             "net47",
             "net471",
             "net472",
-            "net48",
-            "net481"
+            "net48"
           ],
           "assetTargetFallback": true,
           "warn": true,
-          "frameworkReferences": {
-            "Microsoft.AspNetCore.App": {
-              "privateAssets": "none"
-            },
-            "Microsoft.NETCore.App": {
-              "privateAssets": "all"
-            }
-          },
-          "runtimeIdentifierGraphPath": "/opt/homebrew/Cellar/dotnet/7.0.100/libexec/sdk/7.0.100/RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\5.0.415\\RuntimeIdentifierGraph.json"
         }
       }
     }
